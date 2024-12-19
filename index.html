@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <!-- Optionally, add a link to an external CSS file if styles are needed -->
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+</head>
+<body>
+    <!-- Title  -->
+    <h1>Calculator</h1>
+    
+    <!-- Form to represent the calculator -->
+    <form name="calculator">
+        <!-- Display input for showing the result of the calculations (disabled to prevent direct input) -->
+        <input type="text" name="display" disabled><br><br>
+
+        <!-- Buttons for digits 1 to 3 with addition operator -->
+        <button type="button" onclick="addToDisplay('1')">1</button>
+        <button type="button" onclick="addToDisplay('2')">2</button>
+        <button type="button" onclick="addToDisplay('3')">3</button>
+        <button type="button" onclick="addToDisplay('+')">+</button><br><br>
+
+        <!-- Buttons for digits 4 to 6 with subtraction operator -->
+        <button type="button" onclick="addToDisplay('4')">4</button>
+        <button type="button" onclick="addToDisplay('5')">5</button>
+        <button type="button" onclick="addToDisplay('6')">6</button>
+        <button type="button" onclick="addToDisplay('-')">-</button><br><br>
+
+        <!-- Buttons for digits 7 to 9 with digit 0 -->
+        <button type="button" onclick="addToDisplay('7')">7</button>
+        <button type="button" onclick="addToDisplay('8')">8</button>
+        <button type="button" onclick="addToDisplay('9')">9</button>
+        <button type="button" onclick="addToDisplay('0')">0</button><br><br>
+
+        <!-- Buttons for clearing the display and calculating the result -->
+        <button type="button" onclick="clearDisplay()">Clear</button>
+        <button type="button" onclick="calculate()">=</button>
+    </form>
+
+    <!-- JS File -->
+    <script src="calculator.js"></script>
+</body>
+</html>
