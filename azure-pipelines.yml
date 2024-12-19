@@ -1,0 +1,36 @@
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+
+- task: UseNode@1
+  inputs:
+    versionSpec: '22.12.0'  
+    addToPath: true       
+
+
+
+- script: |
+    echo "Installing dependencies"
+    npm install
+  displayName: 'Install Dependencies'
+
+
+- script: |
+    echo "Building the JavaScript application"
+  displayName: 'Build JavaScript App'
+
+
+- task: CopyFiles@2
+  inputs:
+    contents: '**/*'
+    targetFolder: '$(Build.ArtifactStagingDirectory)'
+
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathToPublish: '$(Build.ArtifactStagingDirectory)'
+    artifactName: 'drop'
