@@ -1,0 +1,22 @@
+# Node.js files
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Build directories
+dist/
+build/
+
+# Dependency directories (common in some setups)
+jspm_packages/
+
+# VS Code files
+.vscode/
+
+# Other IDE files
+.idea/
+*.swp
+
+# OS-specific files
+.DS_Store
+Thumbs.db
